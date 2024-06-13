@@ -1,0 +1,10 @@
+
+services:
+  pipelines:
+    image: frictionlessdata/datapackage-pipelines
+    command:
+      - server
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./:/pipelines:rw
