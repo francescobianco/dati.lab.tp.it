@@ -1,0 +1,4 @@
+
+RewriteEngine On
+
+RewriteRule ^pipelines/(.*) http://pipelines:5000/$1 [P]
