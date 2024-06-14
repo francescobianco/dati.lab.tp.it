@@ -1,3 +1,44 @@
 title: dati.lab.tp.it
 remote_theme: timwis/jkan@main
 
+# Site theme
+jkan_theme: Superhero
+
+# Dataset schema
+schema: default
+
+# Nav bar
+navigation:
+  - title: Datasets
+    url: /datasets/
+  - title: Organizations
+    url: /organizations/
+
+# Collections
+collections:
+  datasets:
+    output: true
+    permalink: /datasets/:path/
+  organizations:
+    output: true
+    permalink: /organizations/:path/
+
+# Collections (cont'd)
+defaults:
+  - scope:
+      path: ""
+      type: datasets
+    values:
+      layout: dataset
+      category: Uncategorized
+      organization: N/A
+  - scope:
+      path: ""
+      type: organizations
+    values:
+      layout: organization
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
