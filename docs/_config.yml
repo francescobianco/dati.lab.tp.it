@@ -2,7 +2,7 @@ title: dati.lab.tp.it
 remote_theme: timwis/jkan@main
 
 # Site theme
-jkan_theme: Superhero
+jkan_theme: superhero
 
 # Dataset schema
 schema: default
