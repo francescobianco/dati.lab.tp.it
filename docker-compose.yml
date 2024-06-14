@@ -1,19 +1,8 @@
 
 services:
-
-  quickies:
-    image: yafb/quickies
-    ports:
-      - '8001:80'
-    volumes:
-      - ./.quickies/.htaccess:/var/www/html/public/.htaccess
-      - ./.quickies/hooks.php:/var/www/html/src/hooks.php
-    links:
-      - pipelines
-
   pipelines:
     image: frictionlessdata/datapackage-pipelines
     command:
       - server
     volumes:
-      - ./:/pipelines:rw
+      - ./pipelines:/pipelines:rw
