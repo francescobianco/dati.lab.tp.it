@@ -1,11 +1,6 @@
+# Site settings
 title: dati.lab.tp.it
 remote_theme: timwis/jkan@main
-
-# Site theme
-jkan_theme: Superhero
-
-# Dataset schema
-schema: default
 
 # Nav bar
 navigation:
@@ -13,6 +8,8 @@ navigation:
     url: /datasets/
   - title: Organizations
     url: /organizations/
+  - title: Categories
+    url: /categories/
 
 # Collections
 collections:
@@ -22,9 +19,17 @@ collections:
   organizations:
     output: true
     permalink: /organizations/:path/
+  dataset_categories:
+    output: true
+    permalink: /categories/:path/
 
 # Collections (cont'd)
 defaults:
+  - scope:
+      path: ""
+      type: dataset_categories
+    values:
+      layout: category
   - scope:
       path: ""
       type: datasets
@@ -42,3 +47,12 @@ defaults:
 markdown: kramdown
 kramdown:
   input: GFM
+
+# Exclude from processing.
+exclude:
+  - .bundle/
+  - _config.yml
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - Makefile

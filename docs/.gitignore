@@ -1,0 +1,9 @@
+.idea/
+.vscode/
+.bundles_cache/
+.jekyll-cache/
+.bundle/
+_site/
+Gemfile
+Gemfile.lock
+_config.dev.yml
